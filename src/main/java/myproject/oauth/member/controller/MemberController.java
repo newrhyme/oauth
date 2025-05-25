@@ -43,6 +43,6 @@ public class MemberController {
         Map<String, Object> loginInfo = new HashMap<>();
         loginInfo.put("id", member.getId());
         loginInfo.put("token", jwtToken);
-        return new ResponseEntity<>(jwtToken, HttpStatus.OK);
+        return new ResponseEntity<>(loginInfo, HttpStatus.OK);
     }
 }

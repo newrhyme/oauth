@@ -20,7 +20,7 @@ public class JwtTokenProvider {
     private Key SECRET_KEY;
 
     public JwtTokenProvider(@Value("${jwt.secret}") String secretKey,
-                            @Value("{jwt.expiration}") int expiration) {
+                            @Value("${jwt.expiration}") int expiration) {
         this.secretKey = secretKey;
         this.expiration = expiration;
         // secreetKey가 인코딩 되어있으니까 디코딩, 암호화 알고리즘
